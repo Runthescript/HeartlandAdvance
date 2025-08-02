@@ -1,48 +1,71 @@
 :root {
-  --main-font: "Aptos", "Avenir Next", "Century Gothic", "Segoe UI", sans-serif;
+  --main-font: "Aptos", sans-serif;
 }
-/* Navigation theme settings */
+/* Navigation Styles*/
 nav {
-  padding: .5rem;
-  z-index: 100;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  position: fixed;
+  width: 100vw;
+  margin-left: -1em;
+  padding: 0.45em;
 }
-/* Logo theme settings overide in page for color and size changes theme is set for nav bar currently */
-.logotitle {
-  font-size: 1.64rem;
-  font-weight: 900;
+.navbarLogo {
+  grid-column: auto 1fr;
+  justify-self: start;
+  transform: scale(0.7);
 }
-.logosubtitle {
-    font-size: .52rem;
-}
-.logolinetwocontainer {
+.navLinkList {
   display: flex;
-  align-items: center;
-  gap: .2rem;
+  gap: 1.2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-self: end;
 }
-.line-container {
-  display: flex;
-  margin: 0rem 0.1rem;
-  flex-direction: column;
-  justify-content: space-between;
-  height: .7rem;
-  width: 2.5rem;
+.navLink a {
+  text-decoration: none;
+  color: #ffffff;
 }
-
+.navLink {
+  margin-top: 0.4em;
+}
+/* Logo Styles */
+.logoTitle {
+  margin-bottom: -0.1em;
+  font-size: 1.19em;
+  letter-spacing: 0.2em;
+}
+.logoSubtitleContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15em;
+}
+.logoSubtitle {
+  margin-top: 0.1em;
+  font-size: 0.55em;
+}
+.lineContainer {
+  grid-column: 1fr;
+  width: 2.3em;
+}
 .line {
-  height: 0.08rem;
+  margin: 0.12em 0;
   background-color: #ffffff;
-  border-radius: .01rem;
+  height: 0.08em;
+  border-radius: 0.1em;
 }
-/* Content theme settings  */
+/* Body Styles  */
 body {
   font-family: var(--main-font);
   margin: 0 auto;
   height: 100%;
-  background: url('/public/imgs/AmericanFlag.jpg') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+    url("/public/imgs/AmericanFlag.jpg") center center / cover repeat;
+  color: #171717;
 }
-/* Footer theme settings */
+/* Footer Styles */
 footer {
-padding: 1rem;
-text-align: center;
+  padding: 1rem;
+  text-align: center;
 }

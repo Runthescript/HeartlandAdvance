@@ -4,35 +4,19 @@ nav {
   color: #ffffff;
 }
 main {
-display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
-.herobanner {
-  display: inline-block;
-  margin-bottom: 10%;
-}
-h1 .logotitle {
-  font-size: 12rem;
+.landing {
+  transform: scale(5);
   color: #2f2e7a;
 }
-h1 .logosubtitle {
-  font-size: 4rem;
-  color: #2f2e7a;
+@media (max-width: 670px) {
+  .landing {
+    transform: scale(2);
+  }
 }
-h1 .logolinetwocontainer {
-  gap: 0.2rem;
-}
-h1 .line-container {
-  margin: 0rem 0.3rem;
-  height: 3rem;
-  width: 18rem;
-}
-
-h1 .line {
-  height: 0.4rem;
+main .line {
   background-color: #e11f2c;
-  border-radius: 0.1rem;
 }
